@@ -20,7 +20,13 @@ namespace P013EStore.Core.Entities
 		public bool IsActive { get; set; }
 		[Display(Name = "Üst Menüde Göster")]
 		public bool IsTopMenu { get; set; }
+		[Display(Name = "Üst Kategori")]
 		public int ParentId { get; set; }
+		[Display(Name = "Sıra No")]
+		public int OrderNo { get; set; }
+        [Display(Name = "Eklenme Tarihi"), ScaffoldColumn(false)]
+		public DateTime? CreateDate { get; set; } = DateTime.Now;
+        public List<Product>? Products { get; set; }
 
-	}
+    }
 }
