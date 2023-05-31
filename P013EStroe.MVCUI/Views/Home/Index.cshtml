@@ -1,8 +1,18 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Slider>
+@{
+    ViewData["Title"] = "Anasayfa";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<partial name="_Slider" model="Model"/>
+
+@section scripsts{
+    <script>
+        $(".carousel-item:first").addClass("active")
+    </script>
+}
+
